@@ -1,6 +1,6 @@
 import type { Request, Response } from "express";
-import { db } from "../db/clients.ts";
-import { posts } from "../db/schema.ts";
+import { db } from "../db/clients.js";
+import { posts } from "../db/schema.js";
 import { eq } from "drizzle-orm";
 
 export const getPosts = async (req: Request, res: Response) => {
