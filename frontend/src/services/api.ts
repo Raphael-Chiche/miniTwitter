@@ -1,7 +1,11 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:3000", // ton backend local A CHANGER AVEC MON VERCEL 
+  baseURL:
+    import.meta.env.MODE === "development"
+      ? "http://localhost:3000"
+      : "https://twitterlike-backend.vercel.app",
 });
+
 
 export default api;
